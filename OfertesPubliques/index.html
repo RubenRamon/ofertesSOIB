@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Ofertes d'Ocupació</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/OfertesPubliques/styles/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="text-white p-4 position-relative">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="logo">
+          <img src="./img/logo.png" alt="SOIB logo" class="img-fluid" style="max-height: 60px;">
+        </div>
+        <div>
+          <select class="form-select w-auto">
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
+      </div>
+      <h1 class="text-center"><span></span></h1>
+    </div>
+  </header>
+
+  <!-- Buscador principal -->
+  <section class="container-fluid text-white py-5 text-center principal-search">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">OFERTES D'OCUPACIÓ</h2>
+
+      <!-- Buscador simple -->
+      <!-- Buscador simple actualitzat -->
+        <!-- Buscador simple actualitzat -->
+        <form class="d-flex justify-content-center align-items-center flex-wrap gap-2 mb-3" id="simpleSearchForm">
+            <!-- Input + contenedor para expansión -->
+            <input id="keywordInput" type="text" class="form-control form-control-lg flex-grow-1" style="max-width: 500px;" placeholder="Lloc de treball, Empresa, Paraula clau..." />
+
+            <!-- Contenedor para isla y texto -->
+            <div id="islandFilterGroup" class="d-flex align-items-center gap-2">
+              <span class="fs-4 fw-bold">a</span>
+              <select class="form-select form-select-lg" style="max-width: 200px;">
+                <option selected>Totes les illes</option>
+                <option value="mallorca">Mallorca</option>
+                <option value="menorca">Menorca</option>
+                <option value="eivissa">Eivissa</option>
+                <option value="formentera">Formentera</option>
+              </select>
+            </div>
+
+            <!-- Botons -->
+            <button class="btn btn-outline-light btn-lg" type="submit">Cerca</button>
+            <button id="toggleAdvancedSearch" class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch">
+              Filtres avançats
+            </button>
+        </form>
+
+
+
+      <!-- Filtres avançats -->
+      <div class="collapse" id="advancedSearch">
+  <div class="card card-body bg-light text-dark">
+    <form class="row g-4">
+    <!-- FILA 4: Tipus oferta -->
+      <div class="col-md-12">
+        <label for="tipus" class="form-label">Tipus d’oferta</label>
+        <select class="form-select" id="tipus">
+          <option selected>Totes</option>
+          <option>Pública</option>
+          <option>Privada</option>
+        </select>
+      </div>
+      <!-- FILA 1: Illa / Municipi -->
+      <div class="col-md-6">
+        <label for="illa" class="form-label">Illa</label>
+        <select class="form-select" id="illa">
+          <option selected>Totes les illes</option>
+          <option>Mallorca</option>
+          <option>Menorca</option>
+          <option>Eivissa</option>
+          <option>Formentera</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="municipi" class="form-label">Municipi</label>
+        <select class="form-select" id="municipi">
+          <option selected>Selecciona un municipi</option>
+          <option>Alaior</option>
+          <option>Alaró</option>
+          <option>Alcúdia</option>
+          <option>Algaida</option>
+          <option>Andratx</option>
+          <option>Ariany</option>
+          <option>Artà</option>
+          <option>Banyalbufar</option>
+          <option>Binissalem</option>
+          <option>Búger</option>
+          <option>Bunyola</option>
+          <option>Calvià</option>
+          <option>Campanet</option>
+          <option>Campos</option>
+          <option>Capdepera</option>
+          <option>Ciutadella de Menorca</option>
+          <option>Consell</option>
+          <option>Costitx</option>
+          <option>Deià</option>
+          <option>Eivissa</option>
+          <option>Es Castell</option>
+          <option>Es Mercadal</option>
+          <option>Es Migjorn Gran</option>
+          <option>Escorca</option>
+          <option>Esporles</option>
+          <option>Estellencs</option>
+          <option>Felanitx</option>
+          <option>Ferreries</option>
+          <option>Formentera</option>
+          <option>Fornalutx</option>
+          <option>Inca</option>
+          <option>Lloret de Vistalegre</option>
+          <option>Lloseta</option>
+          <option>Llubí</option>
+          <option>Llucmajor</option>
+          <option>Manacor</option>
+          <option>Mancor de la Vall</option>
+          <option>Maó</option>
+          <option>Maria de la Salut</option>
+          <option>Marratxí</option>
+          <option>Montuïri</option>
+          <option>Muro</option>
+          <option>Palma</option>
+          <option>Petra</option>
+          <option>Pollença</option>
+          <option>Porreres</option>
+          <option>Puigpunyent</option>
+          <option>Sa Pobla</option>
+          <option>Sant Antoni de Portmany</option>
+          <option>Sant Joan</option>
+          <option>Sant Joan de Labritja</option>
+          <option>Sant Josep de sa Talaia</option>
+          <option>Sant Llorenç des Cardassar</option>
+          <option>Sant Lluís</option>
+          <option>Santa Eugènia</option>
+          <option>Santa Eulària des Riu</option>
+          <option>Santa Margalida</option>
+          <option>Santa Maria del Camí</option>
+          <option>Santanyí</option>
+          <option>Selva</option>
+          <option>Sencelles</option>
+          <option>Ses Salines</option>
+          <option>Sineu</option>
+          <option>Sóller</option>
+          <option>Son Servera</option>
+          <option>Valldemossa</option>
+          <option>Vilafranca de Bonany</option>
+        </select>
+      </div>
+
+      <!-- FILA 2: Núm. d'oferta / Entitat -->
+      <div class="col-md-6">
+        <label for="numOferta" class="form-label">Núm. d'oferta</label>
+        <input type="text" class="form-control" id="numOferta" placeholder="Ex: 042025002855">
+      </div>
+
+      <div class="col-md-6">
+        <label for="entitat" class="form-label">Empresa / Entitat</label>
+        <input type="text" class="form-control" id="entitat" placeholder="Nom de l'entitat">
+      </div>
+
+      <!-- FILA 3: Ocupació / Estudis -->
+      <div class="col-md-6">
+        <label for="ocupacio" class="form-label">Ocupació</label>
+        <input type="text" class="form-control" id="ocupacio" placeholder="Nom de l'ocupació">
+      </div>
+
+      <div class="col-md-6">
+        <label for="estudis" class="form-label">Estudis mínims</label>
+        <select class="form-select" id="estudis">
+          <option selected>Selecciona un nivell</option>
+          <option>Sense estudis</option>
+          <option>Estudis primaris</option>
+          <option>ESO o equivalent</option>
+          <option>Batxillerat</option>
+          <option>Formació professional</option>
+          <option>Grau universitari</option>
+          <option>Postgrau o superior</option>
+        </select>
+      </div>
+      
+
+
+      <!-- Botó -->
+      <div class="col-12 text-end">
+        <button type="button" id="resetAdvanced" class="filter-button btn text-white fw-bold">Restaurar filtres</button>
+        <button type="submit" class="filter-button btn text-white fw-bold">Aplicar filtres</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- Taula de resultats -->
+  <main class="container my-5">
+    <div class="bg-white rounded-3 shadow p-4">
+      <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table">
+            <tr>
+              <th>Núm. oferta</th>
+              <th>Data inici sol·licituds</th>
+              <th>Data fi sol·licituds</th>
+              <th>Tipus d'oferta</th>
+              <th>Entitat</th>
+              <th>Ocupació</th>
+              <th>Municipi lloc de feina</th>
+              <th>Illa</th>
+              <th>Estudis mínims</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>042025002855</td>
+              <td>30/05/2025</td>
+              <td>09/06/2025</td>
+              <td>Pública</td>
+              <td>Ens Públic de Radiotelevisió</td>
+              <td>Operador/a de càmera</td>
+              <td>Maó</td>
+              <td>Menorca</td>
+              <td>Grau universitari</td>
+            </tr>
+            <tr>
+  <td>042025002855</td>
+  <td>30/05/2025</td>
+  <td>09/06/2025</td>
+  <td>Pública</td>
+  <td>Ens Públic de Radiotelevisió</td>
+  <td>Operador/a de càmera</td>
+  <td>Maó</td>
+  <td>Menorca</td>
+  <td>Grau universitari</td>
+</tr>
+<tr>
+  <td>042025002856</td>
+  <td>01/06/2025</td>
+  <td>15/06/2025</td>
+  <td>Privada</td>
+  <td>Hotel Sol</td>
+  <td>Recepcionista</td>
+  <td>Ciutadella de Menorca</td>
+  <td>Menorca</td>
+  <td>Batxillerat</td>
+</tr>
+<tr>
+  <td>042025002857</td>
+  <td>02/06/2025</td>
+  <td>16/06/2025</td>
+  <td>Pública</td>
+  <td>Hospital Son Espases</td>
+  <td>Infermer/a</td>
+  <td>Palma</td>
+  <td>Mallorca</td>
+  <td>Grau universitari</td>
+</tr>
+<tr>
+  <td>042025002858</td>
+  <td>03/06/2025</td>
+  <td>20/06/2025</td>
+  <td>Privada</td>
+  <td>Bar Can Toni</td>
+  <td>Cuiner/a</td>
+  <td>Inca</td>
+  <td>Mallorca</td>
+  <td>Formació professional</td>
+</tr>
+<tr>
+  <td>042025002859</td>
+  <td>04/06/2025</td>
+  <td>18/06/2025</td>
+  <td>Pública</td>
+  <td>Ajuntament d’Eivissa</td>
+  <td>Administratiu/va</td>
+  <td>Eivissa</td>
+  <td>Eivissa</td>
+  <td>ESO o equivalent</td>
+</tr>
+<tr>
+  <td>042025002860</td>
+  <td>05/06/2025</td>
+  <td>25/06/2025</td>
+  <td>Privada</td>
+  <td>Supermercat Es Pins</td>
+  <td>Caixer/a</td>
+  <td>Ciutadella de Menorca</td>
+  <td>Menorca</td>
+  <td>Sense estudis</td>
+</tr>
+<tr>
+  <td>042025002861</td>
+  <td>06/06/2025</td>
+  <td>28/06/2025</td>
+  <td>Pública</td>
+  <td>Consell de Mallorca</td>
+  <td>Tècnic/a de gestió</td>
+  <td>Palma</td>
+  <td>Mallorca</td>
+  <td>Postgrau o superior</td>
+</tr>
+<tr>
+  <td>042025002862</td>
+  <td>07/06/2025</td>
+  <td>30/06/2025</td>
+  <td>Privada</td>
+  <td>Construccions Balears</td>
+  <td>Peó de construcció</td>
+  <td>Inca</td>
+  <td>Mallorca</td>
+  <td>ESO o equivalent</td>
+</tr>
+<tr>
+  <td>042025002863</td>
+  <td>08/06/2025</td>
+  <td>10/07/2025</td>
+  <td>Pública</td>
+  <td>Institut d'Estudis Balears</td>
+  <td>Professor/a</td>
+  <td>Maó</td>
+  <td>Menorca</td>
+  <td>Grau universitari</td>
+</tr>
+<tr>
+  <td>042025002864</td>
+  <td>09/06/2025</td>
+  <td>15/07/2025</td>
+  <td>Privada</td>
+  <td>Hotel Mar Blau</td>
+  <td>Cambrer/a de pis</td>
+  <td>Formentera</td>
+  <td>Formentera</td>
+  <td>Batxillerat</td>
+</tr>
+            <!-- Més files -->
+          </tbody>
+        </table>
+        <div id="noResults" style="display:none; margin-top: 1rem; font-weight: bold; color: red;">
+            No s'han trobat resultats.
+        </div>
+      </div>
+
+      <!-- Paginació -->
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <div>
+          <button class="btn btn-outline-secondary">&lt;</button>
+          <button class="btn btn-secondary active">1</button>
+          <button class="btn btn-outline-secondary">2</button>
+          <button class="btn btn-outline-secondary">3</button>
+          <button class="btn btn-outline-secondary">&gt;</button>
+        </div>
+        <div>
+          <select class="form-select w-auto">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-white py-4 mt-auto">
+    <div class="container">
+      <div class="row text-center text-md-start align-items-center g-4">
+        
+        <!-- Left: Logo -->
+        <div class="col-md-4">
+          <img src="./img/logo.png" alt="SOIB logo" class="img-fluid" style="max-width: 200px;">
+        </div>
+
+        <!-- Center: EU -->
+        <div class="col-md-4 text-center">
+          <img src="./img/ue.png" alt="UE logo" class="img-fluid mb-2" style="max-width: 150px;">
+          <p class="mb-0">Consulta els programes <br> finançats per la Unió Europea</p>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="col-md-4 text-md-end text-center">
+          <p class="mb-0">
+            Servei d'Ocupació de les Illes Balears (SOIB)<br>
+            Carrer Gremi d’Hortolans, 11, planta 1a<br>
+            Polígon de son Rossinyol – 07009 Palma<br>
+            Telèfon 971 17 79 00 Fax 971 78 49 42
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+<script>
+  const advancedSearch = document.getElementById('advancedSearch');
+  const islandGroup = document.getElementById('islandFilterGroup');
+  const keywordInput = document.getElementById('keywordInput');
+
+  advancedSearch.addEventListener('shown.bs.collapse', () => {
+    islandGroup.classList.add('d-none');
+    keywordInput.style.maxWidth = '79%';
+  });
+
+  advancedSearch.addEventListener('hidden.bs.collapse', () => {
+    islandGroup.classList.remove('d-none');
+    keywordInput.style.maxWidth = '500px';
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const simpleForm = document.getElementById("simpleSearchForm");
+    const advancedForm = document.querySelector("#advancedSearch form");
+    const rows = document.querySelectorAll("tbody tr");
+    const noResults = document.getElementById("noResults");
+
+    function normalize(text) {
+      return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function filtrarOfertes(event) {
+      event.preventDefault();
+
+      const keyword = normalize(document.getElementById("keywordInput").value.trim());
+      const illaSimple = normalize(document.querySelector("#simpleSearchForm select").value.trim());
+
+      const tipus = normalize(document.getElementById("tipus").value.trim());
+      const illaAvancat = normalize(document.getElementById("illa").value.trim());
+      const municipi = normalize(document.getElementById("municipi").value.trim());
+      const numOferta = normalize(document.getElementById("numOferta").value.trim());
+      const entitat = normalize(document.getElementById("entitat").value.trim());
+      const ocupacio = normalize(document.getElementById("ocupacio").value.trim());
+      const estudis = normalize(document.getElementById("estudis").value.trim());
+
+      let anyVisible = false;
+
+      rows.forEach(row => {
+        const cells = row.querySelectorAll("td");
+        if (cells.length < 9) return;
+
+        const [
+          num, dataInici, dataFi, tipusCell,
+          entitatCell, ocupacioCell, municipiCell,
+          illaCell, estudisCell
+        ] = [...cells].map(td => normalize(td.textContent));
+
+        const visible =
+          (keyword === "" || [num, tipusCell, entitatCell, ocupacioCell, municipiCell, illaCell, estudisCell].some(val => val.includes(keyword))) &&
+          (illaSimple === "totes les illes" || illaSimple === "" || illaCell.includes(illaSimple)) &&
+
+          (tipus === "totes" || tipus === "" || tipusCell.includes(tipus)) &&
+          (illaAvancat === "totes les illes" || illaAvancat === "" || illaCell.includes(illaAvancat)) &&
+          (municipi === "selecciona un municipi" || municipi === "" || municipiCell.includes(municipi)) &&
+          (numOferta === "" || num.includes(numOferta)) &&
+          (entitat === "" || entitatCell.includes(entitat)) &&
+          (ocupacio === "" || ocupacioCell.includes(ocupacio)) &&
+          (estudis === "selecciona un nivell" || estudis === "" || estudisCell.includes(estudis));
+
+        row.style.display = visible ? "" : "none";
+        if (visible) anyVisible = true;
+      });
+
+      noResults.style.display = anyVisible ? "none" : "block";
+    }
+
+    simpleForm.addEventListener("submit", filtrarOfertes);
+    advancedForm.addEventListener("submit", filtrarOfertes);
+
+    // Restaurar filtros
+    document.getElementById("resetSimple")?.addEventListener("click", () => {
+      simpleForm.reset();
+      mostrarTotes();
+    });
+
+    document.getElementById("resetAdvanced")?.addEventListener("click", () => {
+      advancedForm.reset();
+      mostrarTotes();
+    });
+
+    function mostrarTotes() {
+      rows.forEach(row => row.style.display = "");
+      noResults.style.display = "none";
+    }
+  });
+</script>

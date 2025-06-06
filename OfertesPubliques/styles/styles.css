@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+main {
+  flex: 1;
+}
+/* Header */
+header {
+  background-color: #E01E4F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.principal-search {
+  background-color: #E01E4F;
+  color: white;;
+}
+.filter-button {
+  background-color: #E01E4F;
+}
+.filter-button:hover {
+  background-color: #c01a45; /* Un tono más oscuro al hacer hover */
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #E01E4F
+  ;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
