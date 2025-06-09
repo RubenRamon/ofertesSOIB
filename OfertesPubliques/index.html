@@ -18,6 +18,7 @@
             <img src="./img/logo.png" alt="SOIB logo" class="img-fluid" style="max-height: 60px;">
           </a>
         </div>
+        <h1 class="pt-4 text-center display-5 fw-bold mb-4">OFERTES D'OCUPACIÓ</h2>
         <div>
           <select class="form-select w-auto">
             <option value="ca">Català</option>
@@ -25,14 +26,12 @@
           </select>
         </div>
       </div>
-      <h1 class="text-center"><span></span></h1>
     </div>
   </header>
 
   <!-- Buscador principal -->
-  <section class="container-fluid text-white py-5 text-center principal-search">
+  <section class="container-fluid text-white pb-5 text-center principal-search">
     <div class="container">
-      <h2 class="display-5 fw-bold mb-4">OFERTES D'OCUPACIÓ</h2>
 
       <!-- Buscador simple -->
       <!-- Buscador simple actualitzat -->
@@ -340,7 +339,9 @@
             <!-- Més files -->
           </tbody>
         </table>
-        
+        <div id="noResults" style="display:none; margin-top: 1rem; font-weight: bold; color: red;">
+            No s'han trobat resultats.
+        </div>
       </div>
 
       <!-- Paginació -->
