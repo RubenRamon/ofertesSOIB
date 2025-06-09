@@ -27,6 +27,7 @@ header {
 }
 .filter-button {
   background-color: #E01E4F;
+  color: white;
 }
 .filter-button:hover {
   background-color: #c01a45; /* Un tono más oscuro al hacer hover */
@@ -35,11 +36,23 @@ header {
 
 /* Footer */
 footer {
-  background-color: #E01E4F
-  ;
+  background-color: #E01E4F;
   color: white;
   padding: 20px;
   text-align: center;
   flex-shrink: 0;
 }
 
+/* Offer */
+.modal-content.custom-border {
+    border: 4px solid #E01E4F;
+}
+
+.modal-header.custom-header {
+  background-color: #E01E4F;
+  color: white;
+}
+
+.modal-header.custom-header .modal-title {
+  color: white;
+}

@@ -45,13 +45,15 @@
             <a href="#" class="text-primary fw-semibold d-block mb-2">Ens Públic de Radiotelevisió</a>
             <div class="text-muted small mb-2">
               <span class="me-3"><i class="bi bi-geo-alt"></i> Maó (Menorca)</span>
-              <span class="me-3"><i class="bi bi-briefcase"></i>Jornada completa</span>
-              <span><i class="bi bi-clock"></i> Contrato indefinido</span>
+              <span class="me-3"><i class="bi bi-briefcase"></i> Jornada completa</span>
+              <span><i class="bi bi-clock"></i> Contracte indefinit</span>
             </div>
             <div class="text-success small"><b>Inici de sol·licitud</b> 30/05/2025 <b>fins el</b> 09/06/2025</div>
           </div>
           <div>
-            <button class="btn btn-primary mt-3 mt-sm-0">Inscriure-me a l'oferta</button>
+            <button class="btn btn-primary mt-3 mt-sm-0" data-bs-toggle="modal" data-bs-target="#formulariModal">
+              Inscriure-me a l'oferta
+            </button>
           </div>
         </div>
       </div>
@@ -147,5 +149,171 @@
       </div>
     </div>
   </footer>
+ <!-- MODAL FORMULARI -->
+  <div class="modal fade" id="formulariModal" tabindex="-1" aria-labelledby="formulariModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content custom-border">
+        <div class="modal-header custom-header">
+          <h5 class="modal-title" id="formulariModalLabel">Dades personals</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tancar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Cognom 1*</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Cognom 2</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Nom*</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">NIF/NIE*</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Data naixement*</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Domicili*</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Província*</label>
+                <select class="form-select" required>
+                  <option>Selecciona</option>
+                  <option>Álava</option>
+                  <option>Alicante</option>
+                  <option>Albacete</option>
+                  <option>Asturias</option>
+                  <option>Almería</option>
+                  <option>Badajoz</option>
+                  <option>Ávila</option>
+                  <option>Barcelona</option>
+                  <option>Balears</option>
+                  <option>Cáceres</option>
+                  <option>Cádiz</option>
+                  <option>Cantabria</option>
+                  <option>Castellón</option>
+                  <option>Ciudad Real</option>
+                  <option>Córdoba</option>
+                  <option>Cuenca</option>
+                  <option>Girona</option>
+                  <option>Granada</option>
+                  <option>Guadalajara</option>
+                  <option>Guipúzcoa</option>
+                  <option>Huelva</option>
+                  <option>Huesca</option>
+                  <option>Jaén</option>
+                  <option>La Coruña</option>
+                  <option>La Rioja</option>
+                  <option>Las Palmas</option>
+                  <option>León</option>
+                  <option>Lleida</option>
+                  <option>Lugo</option>
+                  <option>Madrid</option>
+                  <option>Málaga</option>
+                  <option>Murcia</option>
+                  <option>Navarra</option>
+                  <option>Ourense</option>
+                  <option>Palencia</option>
+                  <option>Pontevedra</option>
+                  <option>Salamanca</option>
+                  <option>Santa Cruz de Tenerife</option>
+                  <option>Segovia</option>
+                  <option>Sevilla</option>
+                  <option>Soria</option>
+                  <option>Tarragona</option>
+                  <option>Teruel</option>
+                  <option>Toledo</option>
+                  <option>Valencia</option>
+                  <option>Valladolid</option>
+                  <option>Vizcaya</option>
+                  <option>Zamora</option>
+                  <option>Zaragoza</option>
+                  <option>Burgos</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Illa</label>
+                <select class="form-select">
+                  <option>Selecciona</option>
+                  <option>Mallorca</option>
+                  <option>Menorca</option>
+                  <option>Eivissa</option>
+                  <option>Formentera</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Municipi*</label>
+                <select class="form-select" required>
+                  <option>Selecciona</option>
+                  <option>Alaró</option>
+                  <option>Alcúdia</option>
+                  <option>Algaida</option>
+                  <option>Andratx</option>
+                  <option>Artà</option>
+                  <option>Binissalem</option>
+                  <option>Calvià</option>
+                  <option>Ciutadella de Menorca</option>
+                  <option>Eivissa</option>
+                  <option>Es Castell</option>
+                  <option>Felanitx</option>
+                  <option>Inca</option>
+                  <option>Llucmajor</option>
+                  <option>Maó</option>
+                  <option>Manacor</option>
+                  <option>Palma</option>
+                  <option>Pollença</option>
+                  <option>Santa Eulària des Riu</option>
+                  <option>Sant Antoni de Portmany</option>
+                  <option>Sóller</option>
+                  <option>Valldemossa</option>
+                  <option>Alaior</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Localitat*</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">CP*</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Correu electrònic*</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Telèfon*</label>
+                <input type="tel" class="form-control" required>
+              </div>
+              <div class="col-12 mt-4">
+                <label class="form-label d-block">Inscripció al SOIB*</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soib" id="soibSi" value="si" required>
+                  <label class="form-check-label" for="soibSi">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soib" id="soibNo" value="no" required>
+                  <label class="form-check-label" for="soibNo">No</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tancar</button>
+          <button type="submit" class="btn filter-button">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
