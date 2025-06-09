@@ -227,18 +227,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <tr onclick="window.location.href='offer.html';" style="cursor: pointer;">
-                <td>042025002855</td>
-                <td>30/05/2025</td>
-                <td>09/06/2025</td>
-                <td>Pública</td>
-                <td>Ens Públic de Radiotelevisió</td>
-                <td>Operador/a de càmera</td>
-                <td>Maó</td>
-                <td>Menorca</td>
-                <td>Grau universitari</td>
-              </tr>
+            <tr onclick="window.location.href='offer.html';" style="cursor: pointer;">
+              <td>042025002855</td>
+              <td>30/05/2025</td>
+              <td>09/06/2025</td>
+              <td>Pública</td>
+              <td>Ens Públic de Radiotelevisió</td>
+              <td>Operador/a de càmera</td>
+              <td>Maó</td>
+              <td>Menorca</td>
+              <td>Grau universitari</td>
             </tr>
 <tr>
   <td>042025002856</td>
@@ -342,9 +340,7 @@
             <!-- Més files -->
           </tbody>
         </table>
-        <div id="noResults" style="display:none; margin-top: 1rem; font-weight: bold; color: red;">
-            No s'han trobat resultats.
-        </div>
+        
       </div>
 
       <!-- Paginació -->
@@ -366,6 +362,31 @@
         </div>
       </div>
     </div>
+    <section class=" mt-4">
+      <div class="row">
+        <h2><b>No has trobat el que cerques?</b></h2>
+        <p>No et preocupis! Pots subscriure’t per rebre un avís quan publiquem noves ofertes que s’ajustin al teu perfil</p>
+      </div>
+      <form class="" id="simpleSearchForm">
+        <div class="row">
+          <div class="col-3">
+            <select class="form-select form-select-lg">
+              <option selected>Ocupació</option>
+              <option value="electricista">Elecricista</option>
+              <option value="informatic">Informàtic</option>
+              <option value="fontaner">Fontaner</option>
+              <option value="professor">Professor</option>
+            </select>
+          </div>
+          <div class="col-7">
+            <input id="keywordInput" type="text" class="form-control form-control-lg flex-grow-1" placeholder="Correu electrònic" />
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn subscribe-button fs-5 fw-bold">Subscriu-me</button>
+          </div>
+        </div>
+      </form>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -406,6 +427,7 @@
   </footer>
 </body>
 </html>
+
 <script>
   const advancedSearch = document.getElementById('advancedSearch');
   const islandGroup = document.getElementById('islandFilterGroup');

@@ -33,6 +33,19 @@ header {
   background-color: #c01a45; /* Un tono más oscuro al hacer hover */
   color: white;
 }
+.subscribe-button {
+  height: 95%;
+  width: 80%;
+  
+  background-color: #E01E4F;
+  color: white;
+}
+
+.subscribe-button:hover {
+  background-color: #c01a45; 
+  color: white;
+}
+
 
 /* Footer */
 footer {
@@ -57,3 +70,4 @@ footer {
 .modal-header.custom-header .modal-title {
   color: white;
 }
+
