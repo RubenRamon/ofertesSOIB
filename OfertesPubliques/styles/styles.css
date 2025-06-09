@@ -41,6 +41,7 @@ footer {
   padding: 20px;
   text-align: center;
   flex-shrink: 0;
+  font-size: small;
 }
 
 /* Offer */
