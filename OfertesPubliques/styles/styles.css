@@ -46,6 +46,17 @@ header {
   color: white;
 }
 
+.text-soib{
+  color: #E01E4F;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 
 /* Footer */
 footer {
